@@ -49,6 +49,7 @@ find . -name .classpath -type f -delete
 rm -rf `find . -name .settings -type d`
 rm -rf `find . -name target -type d`
 rm -rf `find . -name bin -type d`
+rm -rf `find . -name node_modules -type d`
 tree -a
 zip -r code-$VERSION.zip code
 echo ==============================
