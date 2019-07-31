@@ -1,0 +1,25 @@
+export PORT=8080
+
+npx create-react-app my-app
+cd my-app
+yarn start
+
+http-server ./app -a 0.0.0.0 -p 8000 -c-1
+
+
+yarn build
+
+yarn global add http-server
+
+sudo apt-get -y install tree
+tree
+
+http-server . -a 0.0.0.0 -p 8080
+
+telnet portquiz.net 8080
+
+echo "fs.inotify.max_user_watches=1524288" >> /etc/sysctl.conf
+
+
+echo 'fs.inotify.max_user_watches = 1524288' | sudo tee /etc/sysctl.d/99-whatever.conf 
+sudo sysctl -p --system
