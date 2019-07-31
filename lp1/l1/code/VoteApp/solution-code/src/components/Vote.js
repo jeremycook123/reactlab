@@ -5,6 +5,8 @@ class Vote extends Component{
     constructor () {
       super();
 
+      this.APIHOSTPORT = "localhost:8080";
+
       this.state = {
         vote: 0
       }
@@ -13,7 +15,7 @@ class Vote extends Component{
     }
 
     handleClick () {
-      var url = `http://localhost:8080/languages/${this.props.id}/vote`;
+      var url = `http://${this.APIHOSTPORT}/languages/${this.props.id}/vote`;
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
       axios.get(url)
         .then(response => this.setState({vote: this.state.vote+1}))

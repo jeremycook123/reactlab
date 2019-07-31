@@ -6,6 +6,8 @@ class ProgrammingLanguage extends Component {
     constructor () {
       super();
 
+      this.APIHOSTPORT = "localhost:8080";
+
       this.state = {
         language: {},
         loaded: false
@@ -14,7 +16,7 @@ class ProgrammingLanguage extends Component {
 
     componentDidMount () {
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-      axios.get(`http://localhost:8080/languages/${this.props.id}`).then(
+      axios.get(`http://${this.APIHOSTPORT}/languages/${this.props.id}`).then(
         response => this.setState({
           language: response.data,
           loaded: true
