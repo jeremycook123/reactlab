@@ -30,7 +30,7 @@ Parameters:
 
   EC2ImageId:
     Type: AWS::EC2::Image::Id
-    Default: ami-097e749c4a21d85f5
+    Default: ami-0d398eb3480cb04e7
     Description: CloudAcademy Docker AMI id - base on Amazon Linux 2
 
 Resources:
@@ -109,7 +109,7 @@ Resources:
             curl -sL https://api.github.com/repos/cloudacademy/react-lab1/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
             unzip *.zip
             chown -R ec2-user:ec2-user /cloudacademy
-            docker run --privileged --name ide -dit --restart unless-stopped -p 80:3000 -p 8080:8080 -p 8090:8090 -v "/cloudacademy/lab:/home/project:cached" cloudacademydevops/ide:python37
+            docker run --privileged --name ide -dit --restart unless-stopped -p 80:3000 -p 8080:8080 -p 8090:8090 -v "/cloudacademy/lab:/home/project:cached" cloudacademydevops/ide:react
             echo finished!!
       Tags:
         - Key: Name
