@@ -16,7 +16,7 @@ fi
 #================================
 #================================
 token=$GITHUB_TOKEN
-repo=cloudacademy/reactlp1-lab1
+repo=cloudacademy/go-reactlab
 #================================
 #================================
 

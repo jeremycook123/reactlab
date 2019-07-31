@@ -106,7 +106,7 @@ Resources:
             echo starting...
             mkdir -p /cloudacademy/lab
             cd /cloudacademy/lab            
-            curl -sL https://api.github.com/repos/cloudacademy/react-lab1/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
+            curl -sL https://api.github.com/repos/cloudacademy/go-reactlab/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
             unzip *.zip
             chown -R ec2-user:ec2-user /cloudacademy
             docker run --privileged --name ide -dit --restart unless-stopped -p 80:3000 -p 8080:8080 -p 8090:8090 -v "/cloudacademy/lab:/home/project:cached" cloudacademydevops/ide:react
