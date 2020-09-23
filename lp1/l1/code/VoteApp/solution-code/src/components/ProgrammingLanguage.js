@@ -18,7 +18,6 @@ class ProgrammingLanguage extends Component {
 
   componentDidMount () {
     //CODE7: provide implementation to request language details for current language from the API server
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     axios.get(`http://${this.APIHOSTPORT}/languages/${this.props.id}`).then(
       response => this.setState({
         language: response.data,
